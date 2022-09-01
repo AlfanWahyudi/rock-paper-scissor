@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="keywords"
+			content="HTML, CSS, JavaScript, Portfolio, Rock-Paper-Scissor, Game, Free-to-use, Free"
+		/>
+		<meta name="description" content="Free rock paper scissor game" />
+		<meta name="author" content="Alfan Wahyudi" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissor</title>
+	</head>
+	<body>
+		<main>
+			<div class="wrapper">
+				<h1 class="title">Let's Play</h1>
+				<div class="players">
+					<section class="player">
+						<h2 class="player-name">Player</h2>
+						<div class="left-hand">
+							<img
+								class="rock-hand animate_ltr"
+								src="./public/img/rock.png"
+								alt="Rock"
+							/>
+							<img
+								class="paper-hand animate_ltr"
+								src="./public/img/paper.png"
+								alt="Paper"
+							/>
+							<img
+								class="scissor-hand animate_ltr"
+								src="./public/img/scissor.png"
+								alt="Scissor"
+							/>
+						</div>
+						<div class="score">
+							<p class="player-score">
+								Score : <span id="totalScorePlayer">0</span>
+							</p>
+						</div>
+					</section>
+					<section class="player">
+						<h2 class="player-name">Computer</h2>
+						<div class="right-hand">
+							<img
+								class="rock-hand animate_rtl"
+								src="./public/img/rock.png"
+								alt="Rock"
+							/>
+							<img
+								class="paper-hand animate_rtl"
+								src="./public/img/paper.png"
+								alt="Paper"
+							/>
+							<img
+								class="scissor-hand animate_rtl"
+								src="./public/img/scissor.png"
+								alt="Scissor"
+							/>
+						</div>
+						<div class="score">
+							<p class="player-score">
+								Score : <span id="totalScoreComputer">0</span>
+							</p>
+						</div>
+					</section>
+				</div>
+				<div class="actions">
+					<button id="buttonRock" class="btn">Rock</button>
+					<button id="buttonPaper" class="btn">Paper</button>
+					<button id="buttonScissor" class="btn">Scissor</button>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p class="footer--author">Made by Alfan Wahyudi</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  font-family: sans-serif;
+  background: #66BFBF;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  padding: .5em 0;
+  grid-row: 2 / 3;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/* | Main */
+
+.wrapper {
+  max-width: 700px;
+  height: auto;
+  padding: 30px;
+  display: grid;
+  justify-items: center;
+  grid-gap: 35px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow-x: hidden;
+}
+
+.players {
+  min-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.player {
+  min-width: 120px;
+  text-align: center;
+}
+
+.player-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.right-hand, .left-hand {
+  height: 150px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.right-hand > img {
+  transform: rotateY(180deg);
+}
+
+.paper-hand, .scissor-hand, .scissor-rock{
+  width: 110px;
+  height: auto;
+}
+
+.player-score {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.rock-hand {
+  width: 100px;
+  height: auto;
+}
+
+.rock-hand, .paper-hand, .scissor-hand{
+  display: none;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+}
+
+.btn {
+  width: 80px;
+  border: none;
+  padding: 8px 12px;
+  background: #ffffff;
+  color: #FF0063;
+  border-radius: 5px;
+  border: 1px solid #FF0063;
+  transition: all 250ms ease-in;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #ee005b;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn[disabled] {
+  color: #ffb3d0;
+  border: 1px solid #ffb3d0;
+}
+
+.btn[disabled]:hover {
+  background: #ffffff;
+  cursor: default;
+}
+
+/* | Footer */
+.footer--author {
+  text-align: center;
+  font-weight: 500;
+}
+
+
+.animate_ltr {
+  animation-duration: 800ms;
+  animation-name: left-to-right;
+  animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  animation-play-state: running;
+}
+
+.animate_rtl {
+  animation-duration: 800ms;
+  animation-name: right-to-left;
+  animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+@keyframes left-to-right {
+  from {
+    margin-right: 200%;
+  }
+
+  to {
+    margin-right: 0;
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    margin-left: 200%;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
